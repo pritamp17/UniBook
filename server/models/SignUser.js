@@ -34,33 +34,16 @@ const UserSignupSchema = new mongoose.Schema({
           },
           interests: {
             type: String,
-            required: true,
         },
         password: {
             type: String,
           },
           isVerified:{
-            bool: false,
+            type: Boolean,
+            default: false,
           }
-          
 
 })
 
 
-UserSignupSchema.pre("save", async function () {
-  try {
-    const User = this.constructor;
-    const userExists = await User.find({
-      name: this.get("name"),
-    })
-      .lean()
-      .exec();
-    if (userExists.length > 0) {
-      throw new Error(errorHandler.errors.REGISTER_USERNAME_EXISTS);
-    }
-  } catch (err) {
-    throw new Error(errorHandler.errors.REGISTER_USERNAME_EXISTS);
-  }
-});
-
- module.exports = mongoose.models.User || mongoose.model('UserInfo', UserSignupSchema)
+ module.export = mongoose.models.User || mongoose.model('UserInfo', UserSignupSchema);
