@@ -1,8 +1,13 @@
+import UserNav from '@components/UserNav'
 import React from 'react'
+import  UserCard from '@components/userCard'
 
 function user_dash() {
   return (
-    <div>user_dash</div>
+    <>
+    <UserNav/>
+    <UserCard/>
+    </>  
   )
 }
 
