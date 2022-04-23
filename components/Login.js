@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { GrLogin } from "react-icons/gr";
 
 // eslint-disable-next-line react/display-name
 const Login = ({ setIsLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let data = {
+      email,
+      password,
+    };
+    if (!email || !email.match("^[A-Za-z0-9._%+-]+@mnnit.ac.in$")) {
+      alert("Please enter a valid email address!");
+      return;
+    }
+
+    console.log(data);
+  };
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -24,6 +39,8 @@ const Login = ({ setIsLogin }) => {
                   type="email-address"
                   autoComplete="email"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   placeholder="Email address"
                 />
@@ -37,6 +54,8 @@ const Login = ({ setIsLogin }) => {
                   name="password"
                   type="password"
                   autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   placeholder="Password"
@@ -47,6 +66,7 @@ const Login = ({ setIsLogin }) => {
             <div className="grid grid-cols-2">
               <button
                 type="submit"
+                onClick={(e) => handleSubmit(e)}
                 className="group relative flex justify-center py-2 px-4 mr-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Log in

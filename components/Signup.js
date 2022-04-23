@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { GiArchiveRegister } from "react-icons/gi";
 
 const Signup = ({ setIsLogin }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [regno, setRegno] = useState("");
+  const [branch, setBranch] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let data = {
+      name,
+      email,
+      regno,
+      branch
+    };
+    if (!email || !email.match("^[A-Za-z0-9._%+-]+@mnnit.ac.in$")) {
+      alert("Please enter a valid email address!");
+      return;
+    }
+
+    console.log(data);
+  };
+
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full">
@@ -24,6 +45,9 @@ const Signup = ({ setIsLogin }) => {
                         name="name"
                         id="name"
                         autoComplete="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
                         className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                       />
                     </div>
@@ -37,6 +61,9 @@ const Signup = ({ setIsLogin }) => {
                         name="email-address"
                         id="email-address"
                         autoComplete="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
                         className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                       />
                     </div>
@@ -50,6 +77,9 @@ const Signup = ({ setIsLogin }) => {
                         name="reg_no"
                         id="reg_no"
                         autoCorrect="reg_no"
+                        value={regno}
+                        onChange={(e) => setRegno(e.target.value)}
+                        required
                         className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                       />
                     </div>
@@ -63,6 +93,9 @@ const Signup = ({ setIsLogin }) => {
                         name="branch"
                         id="branch"
                         autoComplete="branch"
+                        value={branch}
+                        onChange={(e) => setBranch(e.target.value)}
+                        required
                         className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                       />
                     </div>
@@ -91,6 +124,7 @@ const Signup = ({ setIsLogin }) => {
                 <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                   <button
                     type="submit"
+                    onClick={(e) => handleSubmit(e)}
                     className="mr-5 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Register
