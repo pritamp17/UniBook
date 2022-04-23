@@ -69,6 +69,7 @@ app.use("/", require("./routers/index"));
 app.use("/user", require("./routers/user"));
 app.use("/signup", require("./routers/signup"));
 app.use("/login", require("./routers/login"));
+app.use("/posts", require("./routers/posts"));
 
 ///// get user by registration number
 

@@ -10,7 +10,7 @@ const randomstring = require("randomstring");
  
 signup.post("/", async (req, res) => {
     const dbPost = req.body;
-    console.log(req.body);
+    // console.log(req.body);
   
     //Check if email exists
      const doc = await User.findOne({ email: req.body.email });
