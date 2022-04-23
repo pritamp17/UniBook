@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import NewPost from "./NewPost";
+import Router from "next/router";
 
-export default function UserNav() {
+export default function UserNav({ pic, logout }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout();
+  };
+
   return (
     <>
       <div className="px-2 sm:px-6 lg:px-8 gradient-bg-welcome">
@@ -26,9 +32,9 @@ export default function UserNav() {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <NewPost show={show} handleClose={handleClose} />
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full m-5">Logout</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full m-5" onClick={handleLogout}>Logout</button>
             <button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-              <Image className="h-8 w-8 rounded-full" width={32} height={32} src="/images/pic.jpg" alt="" />
+              <Image className="h-8 w-8 rounded-full" width={32} height={32} src={pic} alt="" />
             </button>
           </div>
         </div>
