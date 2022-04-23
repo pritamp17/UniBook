@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import { GiArchiveRegister } from "react-icons/gi";
+import FileBase64 from "react-file-base64";
+import axios from "axios";
+import Router from "next/router";
 
 const Signup = ({ setIsLogin }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [regno, setRegno] = useState("");
   const [branch, setBranch] = useState("");
+  const [idcard, setIdcard] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     let data = {
-      name,
-      email,
-      regno,
-      branch
+      name: name,
+      email: email,
+      registration: regno,
+      branch: branch,
+      idCard: idcard,
     };
     if (!email || !email.match("^[A-Za-z0-9._%+-]+@mnnit.ac.in$")) {
       alert("Please enter a valid email address!");
@@ -21,6 +26,28 @@ const Signup = ({ setIsLogin }) => {
     }
 
     console.log(data);
+    savePost(data);
+
+    setName("");
+    setEmail("");
+    setRegno("");
+    setBranch("");
+    setIdcard("");
+  };
+
+  const savePost = async (data) => {
+    await axios
+      .post("http://localhost:9000/signup/", data, {
+        headers: {
+          accept: "applications/json",
+          "Accept-Language": "en-US,en;q=0.8",
+          "Access-Control-Allow-Origin": "http://localhost:3000",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        Router.push("/");
+      });
   };
 
   return (
@@ -104,19 +131,20 @@ const Signup = ({ setIsLogin }) => {
                       <label htmlFor="idcard" className="block text-sm font-medium text-gray-700">
                         ID card image
                       </label>
-                      <span className="sr-only">Choose profile photo</span>
-                      <input
+                      <FileBase64
                         type="file"
                         name="idcard"
                         id="idcard"
                         autoComplete="idcard"
                         className="block w-full text-sm text-slate-500
-      file:mr-4 file:py-2 file:px-4
-      file:rounded-full file:border-0
-      file:text-sm file:font-semibold
-      file:bg-violet-50 file:text-violet-700
-      hover:file:bg-violet-100
-    "
+                                  file:mr-4 file:py-2 file:px-4
+                                  file:rounded-full file:border-0
+                                  file:text-sm file:font-semibold
+                                  file:bg-violet-50 file:text-violet-700
+                                  hover:file:bg-violet-100
+                                  "
+                        multiple={false}
+                        onDone={({ base64 }) => setIdcard(base64)}
                       />
                     </div>
                   </div>
