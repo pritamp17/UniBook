@@ -2,7 +2,7 @@ import React from "react";
 import { GrLogin } from "react-icons/gr";
 
 // eslint-disable-next-line react/display-name
-const Login = ({setIsLogin}) => {
+const Login = ({ setIsLogin }) => {
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -20,8 +20,8 @@ const Login = ({setIsLogin}) => {
                 </label>
                 <input
                   id="email-address"
-                  name="email"
-                  type="email"
+                  name="email-address"
+                  type="email-address"
                   autoComplete="email"
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -49,9 +49,12 @@ const Login = ({setIsLogin}) => {
                 type="submit"
                 className="group relative flex justify-center py-2 px-4 mr-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Sign in
+                Log in
               </button>
-              <button onClick={() => setIsLogin(false)} className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <button
+                onClick={() => setIsLogin(false)}
+                className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
                 Not an user? Register here
               </button>
             </div>
