@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Offcanvas, Form, Button } from "react-bootstrap";
 import FileBase64 from "react-file-base64";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios"
+
 
 const NewPost = (props) => {
   const [title, setTitle] = useState("");
@@ -8,17 +10,20 @@ const NewPost = (props) => {
   const [desc, setDesc] = useState("");
   const [showModal, setShowModal] = React.useState(false);
 
-  const savePost = async (e) => {
-    e.preventDefault();
+  const session = useSelector((state) => state);
 
+  const dispatch = useDispatch();
+  const data = session.data.login;
+
+  const savePost = async (e) => {
+    setShowModal(false);
     const postData = {
-      title,
-      cover,
-      desc,
+      title: data.name,
+      photo: cover,
+      description: desc,
     };
     console.log(postData);
-    save(postData);
-
+    save(postData)
     setCover("");
     setDesc("");
     setTitle("");
@@ -26,7 +31,7 @@ const NewPost = (props) => {
 
   const save = async (postData) => {
     await axios
-      .post("http://localhost:9000/signup/doctor", postData, {
+      .post("http://localhost:9000/post", postData, {
         headers: {
           accept: "applications/json",
           "Accept-Language": "en-US,en;q=0.8",
@@ -34,10 +39,12 @@ const NewPost = (props) => {
         },
       })
       .then((res) => {
-        console.log(res);
-        componentDidMount();
+        console.log(res.data);
+        Router.push("/newsfeed")
       });
   };
+
+
   return (
     <>
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full m-5" type="button" onClick={() => setShowModal(true)}>
@@ -63,21 +70,6 @@ const NewPost = (props) => {
                 <form className="mt-8 space-y-6" action="#" method="POST">
                   <input type="hidden" name="remember" defaultValue="true" />
                   <div className="rounded-md shadow-sm -space-y-px">
-                    <div className="m-5">
-                      <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-                        Post title
-                      </label>
-                      <input
-                        id="title"
-                        name="title"
-                        type="text"
-                        autoComplete="title"
-                        required
-                        onChange={(e) => setTitle(e.target.value)}
-                        className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                        placeholder="Post title"
-                      />
-                    </div>
                     <div className="m-5">
                       <label htmlFor="cover" className="block text-sm font-medium text-gray-700">
                         Cover
@@ -112,7 +104,7 @@ const NewPost = (props) => {
                     <button
                       className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"
-                      onClick={() => setShowModal(false)}
+                      onClick={(e) => savePost()}
                     >
                       Save Changes
                     </button>
