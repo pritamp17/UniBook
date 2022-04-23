@@ -6,7 +6,7 @@ https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/uti
 **/
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://pritam:pritam@cluster0.gbecm.mongodb.net/unibook1?retryWrites=true&w=majority"
+const MONGODB_URI = process.env.MONGODB_URI || true  // --> paste mongo db url here
 
 if (!MONGODB_URI) {
   throw new Error(
