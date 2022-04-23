@@ -3,7 +3,9 @@ import User from '@server/models/SignUser'
 
 export default async function handler (req, res) {
   const { method } = req
-
+  const dbPost = req.body;
+  console.log(req.body);
+  
   await dbConnect()
  
   switch (method) {
@@ -17,6 +19,7 @@ export default async function handler (req, res) {
       break
     case 'POST':
       try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
         const user = await User.create(req.body)
         res.status(201).json({ success: true, data: user })
       } catch (error) {
@@ -32,12 +35,12 @@ export default async function handler (req, res) {
 
 
 // { 
-//     "name": "test1 ",
-//      "email": "test1@test.com",
-//      "registration":"2",
-//      "branch":"electrical",
-//      "idCard":"fhdjfue",
-//      "interests":"porn",
-//      "password":"abc",
-//      "isVerified": "true"
-//      }
+//   "name": "test2 ",
+//    "email": "test2@.com",
+//    "registration":"2",
+//    "branch":"electrical",
+//    "idCard":"fhdjfue",
+//    "interests":"porn",
+//    "password":"abc",
+//    "isVerified": "false"
+//    }
