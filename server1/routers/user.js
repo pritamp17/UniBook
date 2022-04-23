@@ -3,16 +3,26 @@ const user = express.Router();
 const User = require("../Models/User");
 const mongoose = require("mongoose");
 
-user.get("/:id", (req, res) => {
-  var ObjectId = mongoose.Types.ObjectId;
-  User.findById(new ObjectId(req.params.id), (err, data) => {
-    if (err) {
-      console.log(err);
-      res.status(500).send(err);
-    } else {
-      res.status(200).send(data);
-    }
-  });
+user.get("/", async (req, res) => {
+  try {
+    const users = await User.find({ isAdminVerified: false });
+    console.log(users.length);
+    return res.send(users);
+  } catch (err) {
+    console.log(err);
+  }
 });
+
+user.get("/verify/:id", async (req, res) => {
+  try {
+    const reg = req.params.id;
+    const user = await User.findOne({ registration: reg });
+    user.isAdminVerified = true;
+    await user.save();
+    return res.send(user);
+  } catch (err) {
+    console.log(err);
+  }
+})
 
 module.exports = user;
