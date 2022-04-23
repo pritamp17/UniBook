@@ -48,10 +48,10 @@ passportInit(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ limit: "50mb" }));
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ limit: "50mb" }));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
