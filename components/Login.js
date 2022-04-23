@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { GrLogin } from "react-icons/gr";
+import axios from "axios";
+import Router from "next/router";
+
 
 // eslint-disable-next-line react/display-name
 const Login = ({ setIsLogin }) => {
@@ -17,7 +20,28 @@ const Login = ({ setIsLogin }) => {
     }
 
     console.log(data);
+    savePost(data);
+
+    setEmail("");
+    setPassword("");
   };
+
+  const savePost = async (data) => {
+    await axios
+      .post("http://localhost:9000/login/", data, {
+        headers: {
+          accept: "applications/json",
+          "Accept-Language": "en-US,en;q=0.8",
+          "Access-Control-Allow-Origin": "http://localhost:3000",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        Router.push("/newsfeed");
+      });
+  };
+
+
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
