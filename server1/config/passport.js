@@ -15,13 +15,12 @@ const init = (passport) => {
           if (!user) {
             return done(null, false, { message: "Incorrect email" });
           }
-          if (!user.isVerified) {
-            return done(null, false, { message: "User not verified" });
-          }
           try {
             //comparing the password
-            bcrypt.compare(password, user.password).then((match) => {
+            bcrypt.compare(password, user.password).then(async (match) => {
               if (match) {
+                user.isVerified = true;
+                await user.save();
                 return done(null, user, { message: "Logged in success" });
               } else return done(null, false, { message: "Wrong Password" });
             });
