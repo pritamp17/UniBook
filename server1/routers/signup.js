@@ -53,10 +53,20 @@ signup.post("/", async (req, res) => {
     if (doc) {
       doc.isVerified = true;
       doc.save();
-      // res.status(200).send("Verified");
+      // res.status(200).send("Verified"); 
       res.redirect("http://localhost:3000/login");
     } else {
       res.status(404).send("Not found");
     }
+  });
+
+  signup.get("/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+        const doc = await User.findOne({ registration: id });
+        res.send(doc);
+      } catch (err) {
+        console.log(err);
+      }
   });
   module.exports = signup;
