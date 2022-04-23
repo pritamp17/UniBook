@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { GrLogin } from "react-icons/gr";
 import axios from "axios";
 import Router from "next/router";
-
+import { useSelector, useDispatch } from "react-redux";
+import { getSession } from "../redux/actions/sessionActions";
 
 // eslint-disable-next-line react/display-name
 const Login = ({ setIsLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const session = useSelector((state) => state);
+  const user = session.data.login;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     let data = {
@@ -36,11 +42,13 @@ const Login = ({ setIsLogin }) => {
         },
       })
       .then((res) => {
-        console.log(res);
-        Router.push("/newsfeed");
+        console.log(res.data);
+        dispatch(getSession(res.data));
+        Router.push({
+          pathname: "/newsfeed",
+        });
       });
   };
-
 
   return (
     <>

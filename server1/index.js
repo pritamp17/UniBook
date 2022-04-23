@@ -22,27 +22,26 @@ const conn = mongoClient.createConnection(connection_url, {
 });
 
 mongoClient.connect(
-    connection_url,
-    {
-      // useCreateIndex:true,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
-    (err) => {
-      if (err) {
-        console.error(err);
-      }
+  connection_url,
+  {
+    // useCreateIndex:true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (err) {
+      console.error(err);
     }
-  );
+  }
+);
 
-  const db = mongoClient.connection;
+const db = mongoClient.connection;
 db.once("open", () => {
   console.log("DB connected");
-
 });
 
 /// middlewares
- app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false, cookie: { maxAge: 1000 * 60 * 60 * 24 * 7 } }));
+app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false, cookie: { maxAge: 1000 * 60 * 60 * 24 * 7 } }));
 const passportInit = require("./config/passport");
 passportInit(passport);
 app.use(passport.initialize());
@@ -52,13 +51,12 @@ app.use(express.urlencoded({ limit: "50mb" }));
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb" }));
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Allow-Methods", "HEAD, GET, POST, PUT, PATCH, DELETE")
+  res.header("Access-Control-Allow-Methods", "HEAD, GET, POST, PUT, PATCH, DELETE");
   next();
 });
-
 
 //////////////////// API Routes
 app.use(function (req, res, next) {
@@ -72,18 +70,16 @@ app.use("/user", require("./routers/user"));
 app.use("/signup", require("./routers/signup"));
 app.use("/login", require("./routers/login"));
 
-
 ///// get user by registration number
 
 app.get("/user/:registration", async (req, res) => {
   const id = req.params.email;
   const pat = await User.findOne({ email: id });
   if (pat) {
-     res.status(200).send(pat);
+    res.status(200).send(pat);
   } else {
     res.status(404).send("Not found");
   }
 });
-
 
 app.listen(port, () => console.log(` listening on localhost:${port}`));
