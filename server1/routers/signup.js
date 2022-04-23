@@ -6,9 +6,9 @@ const User = require("../Models/User");
 
 
  
-signup.post("/user", async (req, res) => {
+signup.post("/", async (req, res) => {
     const dbPost = req.body;
-    console.log(req.body);
+    // console.log(req.body);
   
     //Check if email exists
      const doc = await User.findOne({ email: req.body.email });
@@ -47,7 +47,7 @@ signup.post("/user", async (req, res) => {
     }   
   });
 
-  signup.get("/user/verify/:id", async (req, res) => {
+  signup.get("/verify/:id", async (req, res) => {
     const id = req.params.id;
     console.log(id);
     const doc = await User.findOne({ password: id });
