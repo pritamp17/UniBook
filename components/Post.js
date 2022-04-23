@@ -27,7 +27,7 @@ const Post = () => {
     <>
       <div className="mt-6">
         {posts.map((post, e) => (
-          <div key={e} className="p-10 border-black border-">
+          <div key={e} className="p-10 border-black border-2 my-5">
             <p className="text-3xl font-bold" rel="noreferrer">
               {post.title} <span className="text-sm font-normal"> posted this </span>
             </p>

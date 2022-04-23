@@ -1,6 +1,6 @@
-import UserNav from '@components/UserNav'
+import UserNav from '../../components/UserNav'
 import React from 'react'
-import  Editdetails from '@components/Editdetails'
+import  Editdetails from '../../components/Editdetails'
 
 function editProfile() {
   return (
