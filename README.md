@@ -17,8 +17,16 @@
  <li><b>Like</b> and <b>Comment</b> on the post feature is also available. <br></li>
  <li><b>Search</b> anyone with the given Registration Number feature also available</li> 
  </ul>
+ <br>
  
- 
+ <h3> Technologies Used </h3>
+  <ul>
+
+ <li>Tailwind</li>
+ <li>Next JS <br></li>
+ <li>Node JS</li>
+ <li>Mongo DB</li>     
+ </ul>
  
  
 
