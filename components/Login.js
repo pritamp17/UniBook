@@ -4,7 +4,6 @@ import axios from "axios";
 import Router from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { getSession } from "../redux/actions/sessionActions";
-
 // eslint-disable-next-line react/display-name
 const Login = ({ setIsLogin }) => {
   const [email, setEmail] = useState("");
@@ -47,6 +46,9 @@ const Login = ({ setIsLogin }) => {
         Router.push({
           pathname: "/newsfeed",
         });
+      })
+      .catch((err) => {
+        alert("Invalid Credentials!");
       });
   };
 

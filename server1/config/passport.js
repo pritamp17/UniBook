@@ -18,7 +18,7 @@ const init = (passport) => {
           try {
             //comparing the password
             bcrypt.compare(password, user.password).then(async (match) => {
-              if (match) {
+              if (match&&user.isAdminVerified) {
                 user.isVerified = true;
                 await user.save();
                 return done(null, user, { message: "Logged in success" });

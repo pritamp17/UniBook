@@ -40,9 +40,9 @@ const Post = () => {
             <div className="py-3">
               <div className="flex justify-between items-center">
                 <p className="flex items-center text-black border hover: cursor-pointer rounded-lg p-2 hover:-translate-y-1 hover:scale-105 hover:bg-[#FB9039] duration-300">
-							<AiOutlineLike size="1.5em" color={"action"} className="mr-2" />
-							{post.like} 
-                 <span className="ml-1">Like</span>
+                  <AiOutlineLike size="1.5em" color={"action"} className="mr-2" />
+                  {post.like}
+                  <span className="ml-1">Like</span>
                 </p>
               </div>
             </div>

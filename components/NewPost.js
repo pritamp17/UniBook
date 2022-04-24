@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FileBase64 from "react-file-base64";
 import { useSelector, useDispatch } from "react-redux";
-import axios from "axios"
-
+import axios from "axios";
+import Router from "next/router";
 
 const NewPost = (props) => {
   const [title, setTitle] = useState("");
@@ -23,7 +23,7 @@ const NewPost = (props) => {
       description: desc,
     };
     console.log(postData);
-    save(postData)
+    save(postData);
     setCover("");
     setDesc("");
     setTitle("");
@@ -40,10 +40,9 @@ const NewPost = (props) => {
       })
       .then((res) => {
         console.log(res.data);
-        Router.push("/newsfeed")
+        Router.push("/newsfeed");
       });
   };
-
 
   return (
     <>
