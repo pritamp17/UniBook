@@ -55,11 +55,11 @@ cd server1
    ```bash
 npm install
 ```
-**3.** Install the dependencies.
+**3.** start frontend.
    ```bash
 npm run dev
 ```
-**3.** cd to server in another terminal.
+**3.** cd to server in another terminal and run the server.
    ```bash
  cd server1
  npm start
