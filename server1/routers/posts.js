@@ -28,13 +28,13 @@ posts.get("/", async (req, res) => {
 });
 
 /// increasing likes
-posts.post("/update/:id", async (req, res) => {
-  const dbPost = req.body;
+posts.get("/like/:id", async (req, res) => {
+  const id = req.params.id;
   // console.log(dbPost);
   try {
-    let user = await Post.findOne({ _id: dbPost });
-    user.like = user.like + 1;
-    await user.save();
+    let post = await Post.findOne({ _id: id });
+    post.like++;
+    await post.save();
     res.status(200).send(user);
   } catch (err) {
     console.log(err);

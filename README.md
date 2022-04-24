@@ -28,17 +28,49 @@
  
  <h2> Technologies Used </h2>
   <ul>
-
- <li>Tailwind: Implimented CSS Library using this technology</li>
- <li>Next JS: This was used for implimenting Front End</li>
- <li>Node JS: This was used for Implimenting the BackEnd </li>
- <li>Mongo DB : Databases</li>     
+  <li>Next JS, Redux</li>
+  <li>Node JS </li>
+  <li>Tailwind css</li>
+   <li>Mongo DB</li>     
  </ul>
  
- <h2> Demo Video Link </h2>
+ # How to run
+ 
+ **1.** Clone the forked repository.
+ ```bash
+https://github.com/pritamp17/UniBook
+```
+ **2.** Navigate to the project directory.
+   ```bash
+cd uniBook
+```
+**3.** Install the dependencies.
+   ```bash
+npm install
+```
+**3.** Install the dependencies present in server.
+   ```bash
+cd server1
+```
+   ```bash
+npm install
+```
+**3.** start frontend.
+   ```bash
+npm run dev
+```
+**3.** cd to server in another terminal and run the server.
+   ```bash
+ cd server1
+ create .env file and paste your mongo uri here
+ npm start
+```
+and there it is !!
 
+ <h2> Demo Video Link </h2>
  https://youtu.be/qqWTmsZtOuQ <br>
  https://drive.google.com/file/d/1kkXTZmSXD8nA8SSe7s_SR14IFqx__v9n/view?usp=sharing
+
  
  <h2> Presentation Link </h2> <br>
  https://docs.google.com/presentation/d/1VktKo-9SpjfuiDZJLqrPpQsQmL9Bt6gOKKVAuKow3Us/edit?usp=sharing
@@ -52,18 +84,10 @@
  </ul>
  
  <h2>Made at </h2>
- 
  ![Built-At-Hack36](https://user-images.githubusercontent.com/42494153/164943165-5e73c69e-c271-4168-99e0-6eded3d80719.png)
 
- <h2> Screenshots </h2>
- 
- ![Screenshot (36)](https://user-images.githubusercontent.com/42494153/164956742-47915cbe-231a-4d30-821b-8b6192a8cfe6.png)
-
- 
- 
+ <h2> Screenshots </h2> 
  ![Screenshot (35)](https://user-images.githubusercontent.com/42494153/164956747-3d8082e1-9dd4-4acd-ba61-30d19775dfcd.png)
-
- 
  ![Screenshot (37)](https://user-images.githubusercontent.com/42494153/164956753-6d0d09f2-7a0f-4455-8ecf-2fd41bcab973.png)
 ![Screenshot (38)](https://user-images.githubusercontent.com/42494153/164956759-73f10a5c-6983-4b71-bb63-86743a9b54f9.png)
 ![Screenshot (39)](https://user-images.githubusercontent.com/42494153/164956764-602e80e9-c673-4d05-b728-59ff0c2c95d8.png)
