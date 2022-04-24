@@ -62,8 +62,10 @@ npm run dev
 **3.** cd to server in another terminal and run the server.
    ```bash
  cd server1
+ create .env file and paste your mongo uri here
  npm start
 ```
+and there it is !!
 
  <h2> Demo Video Link </h2>
  
