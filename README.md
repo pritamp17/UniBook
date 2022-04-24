@@ -68,7 +68,9 @@ npm run dev
 and there it is !!
 
  <h2> Demo Video Link </h2>
- https://youtu.be/qqWTmsZtOuQ
+ https://youtu.be/qqWTmsZtOuQ <br>
+ https://drive.google.com/file/d/1kkXTZmSXD8nA8SSe7s_SR14IFqx__v9n/view?usp=sharing
+
  
  <h2> Presentation Link </h2> <br>
  https://docs.google.com/presentation/d/1VktKo-9SpjfuiDZJLqrPpQsQmL9Bt6gOKKVAuKow3Us/edit?usp=sharing
@@ -84,14 +86,11 @@ and there it is !!
  <h2>Made at </h2>
  ![Built-At-Hack36](https://user-images.githubusercontent.com/42494153/164943165-5e73c69e-c271-4168-99e0-6eded3d80719.png)
 
- <h2> Screenshots </h2>
- ![(38](https://user-images.githubusercontent.com/42494153/164956423-37909c34-cac2-43ab-95cf-0202c654f27d.png)
-![Screenshot (36)](https://user-images.githubusercontent.com/42494153/164956424-1523a13b-8799-463f-a524-ffe890a3010e.png)
-![Screenshot (35)](https://user-images.githubusercontent.com/42494153/164956427-7bc4b54e-3773-42d7-8de7-4c559d8ca908.png)
-![Screenshot (39)](https://user-images.githubusercontent.com/42494153/164956428-1e4ded8e-89e5-4399-805c-59e8b6494941.png)
-![Screenshot (37)](https://user-images.githubusercontent.com/42494153/164956429-ef0567e3-0d1b-4354-9c51-7185e11b028d.png)
-![Screenshot (40)](https://user-images.githubusercontent.com/42494153/164956430-97a69c4d-e0db-417a-8a3d-6bbca19109ad.png)
+ <h2> Screenshots </h2> 
+ ![Screenshot (35)](https://user-images.githubusercontent.com/42494153/164956747-3d8082e1-9dd4-4acd-ba61-30d19775dfcd.png)
+ ![Screenshot (37)](https://user-images.githubusercontent.com/42494153/164956753-6d0d09f2-7a0f-4455-8ecf-2fd41bcab973.png)
+![Screenshot (38)](https://user-images.githubusercontent.com/42494153/164956759-73f10a5c-6983-4b71-bb63-86743a9b54f9.png)
+![Screenshot (39)](https://user-images.githubusercontent.com/42494153/164956764-602e80e9-c673-4d05-b728-59ff0c2c95d8.png)
+![Screenshot (40)](https://user-images.githubusercontent.com/42494153/164956765-243786cc-93f3-4aff-a351-0169c4395695.png)
 
- 
- 
 
