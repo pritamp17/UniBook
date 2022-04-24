@@ -29,15 +29,16 @@
  <h2> Technologies Used </h2>
   <ul>
 
- <li>Tailwind</li>
- <li>Next JS <br></li>
- <li>Node JS</li>
- <li>Mongo DB</li>     
+ <li>Tailwind: Implimented CSS Library using this technology</li>
+ <li>Next JS: This was used for implimenting Front End</li>
+ <li>Node JS: This was used for Implimenting the BackEnd </li>
+ <li>Mongo DB : Databases</li>     
  </ul>
  
  <h2> Demo Video Link </h2>
  
- <h2> Presentation Link </h2>
+ <h2> Presentation Link </h2> <br>
+ https://docs.google.com/presentation/d/1VktKo-9SpjfuiDZJLqrPpQsQmL9Bt6gOKKVAuKow3Us/edit?usp=sharing
  
  <h2> Contributors </h2>
  <h4> Team Name: Bulldozer</h4>
