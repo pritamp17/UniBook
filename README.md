@@ -76,7 +76,6 @@ and there it is !!
  https://docs.google.com/presentation/d/1VktKo-9SpjfuiDZJLqrPpQsQmL9Bt6gOKKVAuKow3Us/edit?usp=sharing
  
  <h2> Contributors </h2>
- <h4> Team Name: Bulldozer</h4>
  <ul>
  <li>Pritam Pawar</li>
  <li>Satya Prakash Satyam<br></li>
