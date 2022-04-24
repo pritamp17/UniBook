@@ -28,11 +28,10 @@
  
  <h2> Technologies Used </h2>
   <ul>
-
- <li>Tailwind: Implimented CSS Library using this technology</li>
- <li>Next JS: This was used for implimenting Front End</li>
- <li>Node JS: This was used for Implimenting the BackEnd </li>
- <li>Mongo DB : Databases</li>     
+  <li>Next JS, Redux</li>
+  <li>Node JS </li>
+  <li>Tailwind css</li>
+   <li>Mongo DB</li>     
  </ul>
  
  <h2> Demo Video Link </h2>
