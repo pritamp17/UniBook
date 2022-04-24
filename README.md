@@ -82,9 +82,6 @@ and there it is !!
  <li>Satya Prakash Satyam<br></li>
  <li>Ayushman Singh</li>
  </ul>
- 
- ## Made at 
- !![Built-At-Hack36](https://user-images.githubusercontent.com/42494153/164942832-baf753cd-58e4-41a3-8410-e387c70f8ec6.png)
 
  ## Screenshots 
  ![Screenshot (35)](https://user-images.githubusercontent.com/42494153/164956747-3d8082e1-9dd4-4acd-ba61-30d19775dfcd.png)
@@ -92,5 +89,5 @@ and there it is !!
 ![Screenshot (38)](https://user-images.githubusercontent.com/42494153/164956759-73f10a5c-6983-4b71-bb63-86743a9b54f9.png)
 ![Screenshot (39)](https://user-images.githubusercontent.com/42494153/164956764-602e80e9-c673-4d05-b728-59ff0c2c95d8.png)
 ![Screenshot (40)](https://user-images.githubusercontent.com/42494153/164956765-243786cc-93f3-4aff-a351-0169c4395695.png)
-
-
+## Made at 
+ !![Built-At-Hack36](https://user-images.githubusercontent.com/42494153/164942832-baf753cd-58e4-41a3-8410-e387c70f8ec6.png)
