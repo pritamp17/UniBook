@@ -75,9 +75,9 @@ and there it is !!
  <h2> Contributors </h2>
  <h4> Team Name: Bulldozer</h4>
  <ul>
- <li>Pritam Pawar</li>
- <li>Satya Prakash Satyam<br></li>
- <li>Ayushman Singh</li>
+ * [Pritam Pawar](https://github.com/pritamp17)
+* [Satya Praskash Satyam ](https://github.com/n00bmaster2810)
+* [Ayushman Pawar](https://github.com/mrayushman)
  </ul>
  
  <h2>Made at </h2>
