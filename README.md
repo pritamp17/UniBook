@@ -85,13 +85,12 @@ and there it is !!
  
  <h2>Made at </h2>
  ![Built-At-Hack36](https://user-images.githubusercontent.com/42494153/164943165-5e73c69e-c271-4168-99e0-6eded3d80719.png)
-<!--  ![alt text](http://url/to/img.png) -->
 
  <h2> Screenshots </h2> 
  ![Screenshot (35)](https://user-images.githubusercontent.com/42494153/164956747-3d8082e1-9dd4-4acd-ba61-30d19775dfcd.png)
  ![Screenshot (37)](https://user-images.githubusercontent.com/42494153/164956753-6d0d09f2-7a0f-4455-8ecf-2fd41bcab973.png)
 ![Screenshot (38)](https://user-images.githubusercontent.com/42494153/164956759-73f10a5c-6983-4b71-bb63-86743a9b54f9.png)
 ![Screenshot (39)](https://user-images.githubusercontent.com/42494153/164956764-602e80e9-c673-4d05-b728-59ff0c2c95d8.png)
-![Screenshot (40)](https://user-images.githubusercontent.com/42494153/164956765-243786cc-93f3-4aff-a351-0169c4395695.png)
+![Screenshot (40)](https://ibb.co/mCbW1Np)
 
 
