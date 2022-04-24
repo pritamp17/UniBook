@@ -81,8 +81,6 @@ and there it is !!
  <li>Ayushman Singh</li>
  </ul>
  
- <h2>Made at </h2>
- 
  <h2> Screenshots </h2>
  ![(38](https://user-images.githubusercontent.com/42494153/164956423-37909c34-cac2-43ab-95cf-0202c654f27d.png)
 ![Screenshot (36)](https://user-images.githubusercontent.com/42494153/164956424-1523a13b-8799-463f-a524-ffe890a3010e.png)
@@ -91,7 +89,7 @@ and there it is !!
 ![Screenshot (37)](https://user-images.githubusercontent.com/42494153/164956429-ef0567e3-0d1b-4354-9c51-7185e11b028d.png)
 ![Screenshot (40)](https://user-images.githubusercontent.com/42494153/164956430-97a69c4d-e0db-417a-8a3d-6bbca19109ad.png)
 
- 
+ <h2>Made at </h2>
  ![Built-At-Hack36](https://user-images.githubusercontent.com/42494153/164943165-5e73c69e-c271-4168-99e0-6eded3d80719.png)
 
  
