@@ -11,7 +11,7 @@ const User_dash = () => {
 
   const dispatch = useDispatch();
   const data = session.data.login;
-  console.log(data)
+  console.log(data);
   const logout = () => {
     console.log("logout");
     dispatch(delSession());

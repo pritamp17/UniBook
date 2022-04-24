@@ -1,7 +1,7 @@
 import { PaperClipIcon } from "@heroicons/react/solid";
 import Router from "next/router";
 const UserCard = ({ data }) => {
-  console.log(data)
+  console.log(data);
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">

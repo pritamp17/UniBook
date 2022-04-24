@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { AiOutlineLike } from "react-icons/ai";
 import Image from "next/image";
-import Router  from "next/router";
+import Router from "next/router";
 
 const Admin_dash = () => {
   const [users, setUsers] = useState([]);
@@ -24,7 +24,7 @@ const Admin_dash = () => {
     };
     fetchUsers();
   }, []);
-  const handleVerify = async(regsitration) => {
+  const handleVerify = async (regsitration) => {
     await axios
       .get("http://localhost:9000/user/verify/" + regsitration, {
         headers: {
@@ -37,7 +37,7 @@ const Admin_dash = () => {
         console.log(res.data);
         Router.push("/admin_dash");
       });
-  }
+  };
   return (
     <div className="container mx-5">
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-5">
@@ -66,7 +66,9 @@ const Admin_dash = () => {
                   {user.name}
                 </th>
                 <td className="px-6 py-4">{user.registration}</td>
-                <td className="px-6 py-4"><Image src={user.idCard} width={300} height={100} /></td>
+                <td className="px-6 py-4">
+                  <Image src={user.idCard} width={300} height={100} />
+                </td>
                 <td className="px-6 py-4 text-right">
                   <button onClick={() => handleVerify(user.registration)} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Verify

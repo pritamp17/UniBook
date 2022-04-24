@@ -46,7 +46,11 @@ const Signup = ({ setIsLogin }) => {
       })
       .then((res) => {
         console.log(res);
+        alert("Signup completed, go to email to see your password and login");
         Router.push("/");
+      })
+      .catch((err) => {
+        alert("Signup failed, try again!");
       });
   };
 

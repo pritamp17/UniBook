@@ -24,7 +24,11 @@ const Feed = ({ id }) => {
     fetchData();
   });
 
-  return <div><UserNav /></div>;
+  return (
+    <div>
+      <UserNav />
+    </div>
+  );
 };
 
 export default Feed;
