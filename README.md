@@ -34,6 +34,37 @@
    <li>Mongo DB</li>     
  </ul>
  
+ # How to run
+ 
+ **1.** Clone the forked repository.
+ ```bash
+https://github.com/pritamp17/UniBook
+```
+ **2.** Navigate to the project directory.
+   ```bash
+cd uniBook
+```
+**3.** Install the dependencies.
+   ```bash
+npm install
+```
+**3.** Install the dependencies present in server.
+   ```bash
+cd server1
+```
+   ```bash
+npm install
+```
+**3.** Install the dependencies.
+   ```bash
+npm run dev
+```
+**3.** cd to server in another terminal.
+   ```bash
+ cd server1
+ npm start
+```
+
  <h2> Demo Video Link </h2>
  
  <h2> Presentation Link </h2> <br>
